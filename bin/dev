@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-if ! command -v foreman &> /dev/null
+if ! command -v /usr/local/lib/ruby/gems/3.1.0/gems/foreman-0.87.2/bin/foreman &> /dev/null
 then
   echo "Installing foreman..."
   gem install foreman
 fi
 
-foreman start -f Procfile.dev
+/usr/local/lib/ruby/gems/3.1.0/gems/foreman-0.87.2/bin/foreman start -f Procfile.dev
