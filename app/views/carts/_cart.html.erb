@@ -7,6 +7,9 @@
         <td>&times;</td>
         <td class="pr-2"><%= item.product.title %></td>
         <td class="text-right font-bold"><%= number_to_currency(item.total_price) %></td>
+        <td>
+          <%= button_to 'delete', item, method: :delete, class: "ml-2 rounded-lg py-1 px-2 text-white bg-red-600",title:'delete from the cart' %>
+        </td>
       </tr>
     <% end %>
     <tfoot>
@@ -17,6 +20,4 @@
     </tfoot>
   </table>
   <%= button_to 'Empty Cart', cart, method: :delete, class: "mt-4 rounded-lg py-1 px-2 text-white bg-green-600" %>
-
-
 </div>
