@@ -1,17 +1,14 @@
-<div id="<%= dom_id line_item %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Product:</strong>
-    <%= line_item.product_id %>
-  </p>
+<% if line_item == @current_item %>
+  <tr class="line-item-highlight">
+<% else %>
+  <tr>
+<% end %>
+<td class="text-right"><%= line_item.quantity %></td>
+<td>
+  <%= button_to '-1', line_item, method: :delete, class: "mr-2 rounded py-1 px-2 text-white bg-red-500", title: 'delete the item' %>
+</td>
+<td>&times;</td>
+<td class="pr-2"><%= line_item.product.title %></td>
+<td class="text-right font-bold"><%= number_to_currency(line_item.total_price) %></td>
+</tr>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Cart:</strong>
-    <%= line_item.cart_id %>
-  </p>
-
-  <% if action_name != "show" %>
-    <%= link_to "Show this line item", line_item, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <%= link_to 'Edit this line item', edit_line_item_path(line_item), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
-    <hr class="mt-6">
-  <% end %>
-</div>
