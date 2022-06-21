@@ -7,7 +7,7 @@ one:
   quantity: 1
 
 two:
-  product: two
-  cart: two
+  product: ruby
+  order: one
   price: 9.99
   quantity: 1
