@@ -4,9 +4,6 @@
   <tr>
 <% end %>
 <td class="text-right"><%= line_item.quantity %></td>
-<td>
-  <%= button_to '-1', line_item, method: :delete, class: "mr-2 rounded py-1 px-2 text-white bg-red-500", title: 'delete the item' %>
-</td>
 <td>&times;</td>
 <td class="pr-2"><%= line_item.product.title %></td>
 <td class="text-right font-bold"><%= number_to_currency(line_item.total_price) %></td>

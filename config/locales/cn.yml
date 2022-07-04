@@ -1,4 +1,4 @@
-en:
+cn:
 
   number:
     currency:
@@ -8,33 +8,45 @@ en:
         separator: "."
         delimiter: ","
         format:    "%u%n"
-
+  activerecord:
+    models:
+      order: "订单"
+  attributes:
+    order:
+      address: "地址"
+      name: "姓名"
+      email: "电子邮箱"
+      pay_type: "支付方式"
+    errors:
+      messages:
+        inclusion: "必须包含在选项列表中"
+        blank:     "不能为空"
   errors:
     template:
       body:        "There were problems with the following fields:"
-      header:       
+      header:
         one:       "1 error prohibited this %{model} from being saved"
         other:     "%{count} errors prohibited this %{model} from being saved"
 
   layouts:
     application:
-      title:       "The Pragmatic Bookshelf"
-      home:        "Home"
-      questions:   "Questions"
-      news:        "News"
-      contact:     "Contact"
+      title:       "实用书架"
+      home:        "主页"
+      questions:   "问题"
+      news:        "新闻"
+      contact:     "联系我们"
 
   carts:
     cart:
-      title:       "Your Cart"
-      empty:       "Empty cart"
-      checkout:    "Checkout"
+      title:       "您的购物车"
+      empty:       "清空购物车"
+      checkout:    "下单"
 
   store:
     index:
-      title_html:  "Your Pragmatic Catalog"
+      title_html:  "你的实用目录"
     product:
-      add_html:    "Add to Cart"
+      add_html:    "加入购物车"
 
   orders:
     new:
@@ -60,4 +72,4 @@ en:
       po_number: "PO #"
 
 
-  thanks:          "Thank you for your order"
+  thanks:          "感谢惠顾"
