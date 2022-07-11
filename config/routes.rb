@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :support_requests, only: %i[index update]
 
   scope '(:locale)' do
     resources :orders

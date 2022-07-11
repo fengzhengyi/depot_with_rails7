@@ -43,11 +43,11 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address              => "smtpdm.aliyun.com",
-    :port                 => 80,
-    :domain               => "aliyun.com",
-    :user_name            => "teamwork@notice.jingdiao.com",
-    :password             => "T1a3w02K2021",
+    :address => "smtpdm.aliyun.com",
+    :port => 80,
+    :domain => "aliyun.com",
+    :user_name => "teamwork@notice.jingdiao.com",
+    :password => "T1a3w02K2021",
     # :authentication       => "plain",
     # :enable_starttls_auto => true
   }
@@ -78,4 +78,6 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+  #
+  config.active_storage.service = :local
 end
